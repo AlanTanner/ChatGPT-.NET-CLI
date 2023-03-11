@@ -1,8 +1,7 @@
 {
   "profiles": {
     "ChatGPT-.NET-CLI": {
-      "commandName": "Project",
-      "commandLineArgs": "“Act as a vlogger and give a tour of your home in LA”"
+      "commandName": "Project"
     },
     "WSL": {
       "commandName": "WSL2",
