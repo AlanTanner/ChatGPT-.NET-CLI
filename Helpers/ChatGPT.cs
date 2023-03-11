@@ -1,11 +1,7 @@
 ﻿
 using OpenAI.GPT3.Interfaces;
-using OpenAI.GPT3.ObjectModels.RequestModels;
 using OpenAI.GPT3.ObjectModels;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+using OpenAI.GPT3.ObjectModels.RequestModels;
 using System.Text;
 
 namespace ChatGPT_.NET_CLI.Helpers
@@ -21,6 +17,7 @@ namespace ChatGPT_.NET_CLI.Helpers
                 {
                     new(StaticValues.ChatMessageRoles.System, systemPrompt)
                 };
+
                 while (true)
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
@@ -31,7 +28,7 @@ namespace ChatGPT_.NET_CLI.Helpers
                         Model = Models.ChatGpt3_5Turbo
                     });
 
-                    StringBuilder stringBuilder = new StringBuilder();
+                    StringBuilder stringBuilder = new();
                     await foreach (var completion in completionResult)
                     {
                         if (completion.Successful)
@@ -56,7 +53,7 @@ namespace ChatGPT_.NET_CLI.Helpers
 
                     //save response from chatGPT
                     history.Add(new(StaticValues.ChatMessageRoles.Assistant, stringBuilder.ToString()));
-                    
+
                     string? message = string.Empty;
                     do
                     {
@@ -79,7 +76,5 @@ namespace ChatGPT_.NET_CLI.Helpers
                 throw;
             }
         }
-
-
     }
 }
