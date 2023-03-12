@@ -1,4 +1,5 @@
 # ChatGPT-.NET-CLI
+![Build/Test](https://github.com/AlanTanner/ChatGPT-.NET-CLI/actions/workflows/dotnet.yml/badge.svg) ![visitors](https://visitor-badge.glitch.me/badge?page_id=AlanTanner.ChatGPT-.NET-CLI)
 
 > :warning: You will need an OpenAI API to build this app
 
